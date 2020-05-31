@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express(),
       bodyParser = require("body-parser");
-      port = 3080;
+
 
 const handlers = require('./handlers');
 const middlewares = require('./middlewares');
@@ -20,7 +20,7 @@ app.get('/api/getmodelsformake/:make_name', handlers.getModelsForMakeHandler);
 
 
 
-app.listen(port, () => {
-    console.log(`Server listening on the port::${port}`);
+app.listen(process.env.PORT || 3080, () => {
+    console.log(`Server listening on the port::${process.env.PORT || 3080}`);
 });
 
