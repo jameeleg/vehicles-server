@@ -848,9 +848,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "handlerError",
         value: function handlerError(err, loader) {
-          this.loader.stopLoading(loader);
-          var errMsg = err.error.error[0].Message;
-          this.notifier.notify(errMsg, 'Dismiss', false);
+          this.loader.stopLoading(loader); // const errMsg = err.error.error[0].Message;
+
+          this.notifier.notify('Something went wrong!', 'Dismiss', false);
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])([]);
         }
       }, {

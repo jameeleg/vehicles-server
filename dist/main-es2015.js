@@ -471,8 +471,8 @@ class AuthService {
     }
     handlerError(err, loader) {
         this.loader.stopLoading(loader);
-        const errMsg = err.error.error[0].Message;
-        this.notifier.notify(errMsg, 'Dismiss', false);
+        // const errMsg = err.error.error[0].Message;
+        this.notifier.notify('Something went wrong!', 'Dismiss', false);
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])([]);
     }
     get loggedIn() {
