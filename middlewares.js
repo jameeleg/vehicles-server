@@ -12,7 +12,7 @@ const authMiddleware = function() {
         const token = req.headers.authorization.slice(7);
         const decryptedToken = encryption.getTokenParts(token);
         
-        const db = require('./credentials.json');
+        const db = require('./db.json');
         const user = database.getUser(decryptedToken.uid);
 
         // Make sure the user is logged-in
